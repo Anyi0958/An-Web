@@ -91,16 +91,16 @@ JavaScript 是互联网上最流行的脚本语言，这门语言可用于 HTML 
   - 注意：`typeof` 不能区分 `null` 和 对象类型(`Array Object Date`)
 
 ```javascript
-      typeof "";           // 返回 string
-      typeof 0;            // 返回 number
-      typeof false;        // 返回 boolean
-      typeof Symbol();     // 返回 symbol
-      typeof undefined;    // 返回 undefined
-      typeof function(){}; // 返回 function
-      typeof null;         // 返回 object
-      typeof [];           // 返回 object
-      typeof {};           // 返回 object
-      typeof new Date();   // 返回 object
+      typeof "";           // 返回 "string"
+      typeof 0;            // 返回 "number"
+      typeof false;        // 返回 "boolean"
+      typeof Symbol();     // 返回 "symbol"
+      typeof undefined;    // 返回 "undefined"
+      typeof function(){}; // 返回 "function"
+      typeof null;         // 返回 "object"
+      typeof [];           // 返回 "object"
+      typeof {};           // 返回 "object"
+      typeof new Date();   // 返回 "object"
       
 ```
 
@@ -109,7 +109,9 @@ JavaScript 是互联网上最流行的脚本语言，这门语言可用于 HTML 
   - 原理：`constructor` 属性返回所有 `JavaScript` 变量的构造函数。
 
   - 注意：`constructor` 不能区分 `null` 和 `undefined`（无 `constructor` 属性，会报错 `Uncaught TypeError` ）
-
+  
+  - 补充：`null` 和 `undefined` 可以用 `===` 区分
+  
   ```javascript
     "".constructor.toString()            // 返回函数 function String()  { [native code] }
     (0).constructor.toString()           // 返回函数 function Number()  { [native code] }
@@ -121,6 +123,8 @@ JavaScript 是互联网上最流行的脚本语言，这门语言可用于 HTML 
     function(){}.constructor.toString()  // 返回函数 function Function(){ [native code] }
     (null).constructor.toString()        // 返回error Uncaught TypeError: Cannot read property 'constructor' of null
     (undefined).constructor.toString()   // 返回error Uncaught TypeError: Cannot read property 'constructor' of null
+    undefined === undefined              // 返回 true
+    null === null                        // 返回 true
   ```
 
 ### 使用 toString 判断 (推荐)
@@ -562,6 +566,12 @@ xhr.onreadystatechange = function(){
   // 响应成功返回结果
   if(xhr.readyState === 4 && xhr.status === 200){
     console.log(xhr.responseText)
+    document.getElementsByTagName('body')[0].innerHTML = xhr.responseText;
+  }
+}
+
+```
+console.log(xhr.responseText)
     document.getElementsByTagName('body')[0].innerHTML = xhr.responseText;
   }
 }
