@@ -43,7 +43,7 @@ JavaScript 是互联网上最流行的脚本语言，这门语言可用于 HTML 
 </html>
 ```
 - 效果
-![](https://static01.imgkr.com/temp/f77862bac98647fbbf8f3dada0b7beb5.gif =40%x)
+![document.write()](https://static01.imgkr.com/temp/f77862bac98647fbbf8f3dada0b7beb5.gif =40%x)
 
 
 
