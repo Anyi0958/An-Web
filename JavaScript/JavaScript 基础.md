@@ -571,9 +571,4 @@ xhr.onreadystatechange = function(){
 }
 
 ```
-console.log(xhr.responseText)
-    document.getElementsByTagName('body')[0].innerHTML = xhr.responseText;
-  }
-}
 
-```
