@@ -207,7 +207,11 @@ git reset--hard HEAD
 
   > `git push`
   
+## pull 拉取 
 
+- 推取远程仓库到本地
+
+  > `git pull`
  
   
   
