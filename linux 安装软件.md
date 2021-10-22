@@ -303,6 +303,10 @@ npm --version
 
 ```shell
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+
+or 
+
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 ```
 
 该脚本会将nvm存储库从Github克隆到`~/.nvm`，并将脚本路径添加到您的Bash或ZSH配置文件中
