@@ -81,6 +81,8 @@ tar zxvf nginx-1.20.1.tar.gz
 #### 下载并安装MySQL官方的 Yum Repository
 
    ```shell
+cd /usr/local/src/
+
 wget -i -c http://dev.mysql.com/get/mysql57-community-release-el7-10.noarch.rpm
    ```
 
